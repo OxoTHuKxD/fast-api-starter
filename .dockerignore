@@ -1,0 +1,11 @@
+.*
+venv
+!.gitignore
+!.cmt
+!.coveragerc
+!.dockerignore
+!.env-ci
+!.gitlab-ci.yml
+!.isort.cfg
+!.pylintrc
+!.test.env.sample

@@ -1,0 +1,20 @@
+version: '3.7'
+
+networks:
+  test_exness_test_backend:
+    name: test-exness-test-backend
+    driver: bridge
+
+services:
+  test_postgres:
+    image: postgres:12-alpine
+    env_file:
+      - .test.env
+    environment:
+      - POSTGRES_DB=test_exness_test
+      - POSTGRES_USER=test_exness_test
+      - POSTGRES_PASSWORD=password
+    ports:
+      - 7432:5432
+    networks:
+      - test_exness_test_backend
